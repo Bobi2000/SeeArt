@@ -70,7 +70,7 @@ using Art.Models;
             WriteLiteral("\r\n<h2>AddPage</h2>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        ");
             EndContext();
             BeginContext(167, 771, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06f490f26c844e3fa78632d1af8fafe6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a93e43389574421591ab7787b8643f3b", async() => {
                 BeginContext(261, 77, true);
                 WriteLiteral("\r\n            <hr />\r\n\r\n            <input type=\"hidden\" class=\"form-control\"");
                 EndContext();
@@ -85,7 +85,7 @@ WriteAttributeValue("", 346, ViewData["id"], 346, 15, false);
                 WriteLiteral(" name=\"chapterId\" />\r\n\r\n            <div class=\"form-group\">\r\n                <input class=\"form-control\" type=\"file\" name=\"file\" />\r\n            </div>\r\n\r\n            <div class=\"form-group\">\r\n                ");
                 EndContext();
                 BeginContext(572, 129, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c1bb21c0d0a94ca18f06e7686f963d14", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c42eb162a2ed4a749ea9b9b4854fa3b6", async() => {
                     BeginContext(676, 16, true);
                     WriteLiteral("Add Another Page");
                     EndContext();

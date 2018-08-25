@@ -68,7 +68,7 @@ using Art.Models;
             WriteLiteral("\r\n<h2>UploadComic</h2>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        ");
             EndContext();
             BeginContext(177, 1019, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4122e0851ae54ef59370049d52c9e177", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90213b7b27824885be57a5968723286b", async() => {
                 BeginContext(275, 914, true);
                 WriteLiteral(@"
             <hr />

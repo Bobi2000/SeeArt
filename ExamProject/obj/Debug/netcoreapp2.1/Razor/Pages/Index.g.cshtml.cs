@@ -74,7 +74,7 @@ using Art.Models;
                 <li class=""nav-item"">");
             EndContext();
             BeginContext(406, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e4727024de441fa8e96ff084fe0d076", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cd40bdb076b1438998b16ae21b670485", async() => {
                 BeginContext(500, 6, true);
                 WriteLiteral("Browse");
                 EndContext();
@@ -102,7 +102,7 @@ using Art.Models;
             WriteLiteral("</li>\r\n                <li class=\"nav-item\">");
             EndContext();
             BeginContext(554, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f8a066413b7c47d6b6237227bad32d5c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "403e5cd6cf3b47de9a27a266cf96b1a0", async() => {
                 BeginContext(621, 6, true);
                 WriteLiteral("Newest");
                 EndContext();
@@ -126,7 +126,7 @@ using Art.Models;
             WriteLiteral("</li>\r\n                <li class=\"nav-item\">");
             EndContext();
             BeginContext(675, 75, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5defd003fd10446ea64cab4c8f47060b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d6e6261038fe466db1a8f52b97533f95", async() => {
                 BeginContext(741, 5, true);
                 WriteLiteral("Daily");
                 EndContext();
@@ -150,7 +150,7 @@ using Art.Models;
             WriteLiteral("</li>\r\n                <li class=\"nav-item\">");
             EndContext();
             BeginContext(794, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "07dd6959c4c749edafec511ef69d74c6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f80c787de1a845f58973a1f42efade1e", async() => {
                 BeginContext(869, 16, true);
                 WriteLiteral("Popular All Time");
                 EndContext();

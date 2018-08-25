@@ -72,7 +72,7 @@ using Art.Models;
             WriteLiteral("\r\n<h2>AddChapter</h2>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        ");
             EndContext();
             BeginContext(173, 931, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a77d4fa5c65c4c81aa30456d42df79c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c5e310af46f44848e01582be8cb91d3", async() => {
                 BeginContext(270, 63, true);
                 WriteLiteral("\r\n            <hr />\r\n\r\n            <input class=\"form-control\"");
                 EndContext();
@@ -99,7 +99,7 @@ WriteAttributeValue("", 341, ViewData["id"], 341, 15, false);
                 ");
                 EndContext();
                 BeginContext(742, 129, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "56f6aba1236b4efaaf592d1efaad4042", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "071ad55e39684716a6cfbbbca20b0419", async() => {
                     BeginContext(846, 16, true);
                     WriteLiteral("Add Another Page");
                     EndContext();
@@ -124,7 +124,7 @@ WriteAttributeValue("", 341, ViewData["id"], 341, 15, false);
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(889, 118, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "197228e86f024de1816a7357195ff3b1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe00899f5e664fcf94a1ad01e3bef119", async() => {
                     BeginContext(960, 38, true);
                     WriteLiteral("<div style=\"color: black\">Upload</div>");
                     EndContext();

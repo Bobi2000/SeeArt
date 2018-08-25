@@ -22,8 +22,11 @@ namespace Art.App.Pages.Chapters
             this.Chapter = this.Context.Chapters
                 .Include(a => a.Pictures)
                 .ThenInclude(a => a.Picture)
-                .Where(a => a.ComicId == id)
+                .Where(a => a.Id == id)
                 .FirstOrDefault();
+            
+
+            var aa = 5;
         }
     }
 }
