@@ -1,0 +1,172 @@
+﻿@page
+@model Art.App.Pages.IndexModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="navbar navbar-expand-lg navbar-light" style="background-color: #4aa1ff;">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a asp-area="" asp-controller="Home" asp-action="Index" style="color: white" class="nav-link">Browse</a></li>
+                <li class="nav-item"><a asp-page-handler="Newest" style="color: white" class="nav-link">Newest</a></li>
+                <li class="nav-item"><a asp-page-handler="Daily" style="color: white" class="nav-link">Daily</a></li>
+                <li class="nav-item"><a asp-page-handler="PopularAllTime" style="color: white" class="nav-link">Popular All Time</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="/comics/view" style="color: white" class="nav-link">Comics</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<table class="table table-borderless">
+    <tbody>
+        @for (int i = 0; i < Model.FollowedUsersPictures.Count; i += 3)
+        {
+            <tr>
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">@Model.FollowedUsersPictures[i].Title</h5>
+                                <div class="container">
+                                    <div class="row">
+                                        <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/profile/@Model.FollowedUsersPictures[i].UserName"><p style="text-align: left" class="card-text">@Model.FollowedUsersPictures[i].UserName</p></a>
+                                        </div>
+                                        <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.FollowedUsersPictures[i].Id"><p style="text-align: left" class="card-text">@Model.FollowedUsersPictures[i].Likes Likes</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@Model.FollowedUsersPictures[i].Id"><img class="card-img-bottom" src="/@Model.FollowedUsersPictures[i].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+                @if (Model.FollowedUsersPictures.ElementAtOrDefault(i + 1) != null)
+                {
+                    <td>
+                        <div class="text-center">
+                            <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Model.FollowedUsersPictures[i + 1].Title</h5>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/profile/@Model.FollowedUsersPictures[i + 1].UserName"><p style="text-align: left" class="card-text">@Model.FollowedUsersPictures[i + 1].UserName</p></a>
+                                            </div>
+                                            <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.FollowedUsersPictures[i + 1].Id"><p style="text-align: left" class="card-text">@Model.FollowedUsersPictures[i + 1].Likes Likes</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/viewimage/image/@Model.FollowedUsersPictures[i + 1].Id"><img class="card-img-bottom" src="/@Model.FollowedUsersPictures[i + 1].Url" style="max-height: 200px; height: auto" /></a>
+                            </div>
+                        </div>
+                    </td>
+                }
+                @if (Model.FollowedUsersPictures.ElementAtOrDefault(i + 2) != null)
+                {
+                    <td>
+                        <div class="text-center">
+                            <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Model.FollowedUsersPictures[i + 2].Title</h5>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/profile/@Model.FollowedUsersPictures[i + 2].UserName"><p style="text-align: left" class="card-text">@Model.FollowedUsersPictures[i + 2].UserName</p></a>
+                                            </div>
+                                            <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.FollowedUsersPictures[i + 2].Id"><p style="text-align: left" class="card-text">@Model.FollowedUsersPictures[i + 2].Likes Likes</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/viewimage/image/@Model.FollowedUsersPictures[i + 2].Id"><img class="card-img-bottom" src="/@Model.FollowedUsersPictures[i + 2].Url" style="max-height: 200px; height: auto" /></a>
+                            </div>
+                        </div>
+                    </td>
+                }
+            </tr>
+        }
+        @for (int i = 0; i < Model.TopDailyPictures.Count; i += 3)
+        {
+            <tr>
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">@Model.TopDailyPictures[i].Title</h5>
+                                <div class="container">
+                                    <div class="row">
+                                        <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/profile/@Model.TopDailyPictures[i].UserName"><p style="text-align: left" class="card-text">@Model.TopDailyPictures[i].UserName</p></a>
+                                        </div>
+                                        <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.TopDailyPictures[i].Id"><p style="text-align: left" class="card-text">@Model.TopDailyPictures[i].Likes Likes</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@Model.TopDailyPictures[i].Id"><img class="card-img-bottom" src="/@Model.TopDailyPictures[i].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+                @if (Model.TopDailyPictures.ElementAtOrDefault(i + 1) != null)
+                {
+                    <td>
+                        <div class="text-center">
+                            <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Model.TopDailyPictures[i + 1].Title</h5>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/profile/@Model.TopDailyPictures[i + 1].UserName"><p style="text-align: left" class="card-text">@Model.TopDailyPictures[i + 1].UserName</p></a>
+                                            </div>
+                                            <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.TopDailyPictures[i + 1].Id"><p style="text-align: left" class="card-text">@Model.TopDailyPictures[i + 1].Likes Likes</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/viewimage/image/@Model.TopDailyPictures[i + 1].Id"><img class="card-img-bottom" src="/@Model.TopDailyPictures[i + 1].Url" style="max-height: 200px; height: auto" /></a>
+
+                            </div>
+                        </div>
+                    </td>
+                }
+                @if (Model.TopDailyPictures.ElementAtOrDefault(i + 2) != null)
+                {
+                    <td>
+                        <div class="text-center">
+                            <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Model.TopDailyPictures[i + 2].Title</h5>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/profile/@Model.TopDailyPictures[i + 2].UserName"><p style="text-align: left" class="card-text">@Model.TopDailyPictures[i + 2].UserName</p></a>
+                                            </div>
+                                            <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.TopDailyPictures[i + 2].Id"><p style="text-align: left" class="card-text">@Model.TopDailyPictures[i + 2].Likes Likes</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/viewimage/image/@Model.TopDailyPictures[i + 2].Id"><img class="card-img-bottom" src="/@Model.TopDailyPictures[i + 2].Url" style="max-height: 200px; height: auto" /></a>
+
+                            </div>
+                        </div>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

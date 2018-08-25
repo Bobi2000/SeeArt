@@ -1,0 +1,90 @@
+﻿@page
+@model Art.App.Areas.Admin.Pages.AdminModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin Panel</h2>
+
+<table class="table table-borderless">
+    <tbody>
+        @for (int i = 0; i < Model.ReportedPictures.Count; i += 3)
+        {
+            <tr>
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <div class="container">
+                                    <form method="post">
+                                        <input type="hidden" asp-for="PictureId" class="form-control" value="@Model.ReportedPictures[i].Id" />
+                                        <div class="row">
+                                            <div style="text-align: right" class="col-lg-8 d-flex align-items-stretch">
+                                                <button asp-page-handler="Approve" class="btn btn-success">Approve</button>
+                                            </div>
+                                            <div style="text-align: left" class="col-lg-4 d-flex align-items-stretch">
+                                                <button asp-page-handler="Delete" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@Model.ReportedPictures[i].Id"><img class="card-img-bottom" src="/@Model.ReportedPictures[i].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+                @if (Model.ReportedPictures.ElementAtOrDefault(i + 1) != null)
+                {
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <div class="container">
+                                    <form method="post">
+                                        <input type="hidden" asp-for="PictureId" class="form-control" value="@Model.ReportedPictures[i + 1].Id" />
+                                        <div class="row">
+                                            <div style="text-align: right" class="col-lg-8 d-flex align-items-stretch">
+                                                <button asp-page-handler="Approve" class="btn btn-success">Approve</button>
+                                            </div>
+                                            <div style="text-align: left" class="col-lg-4 d-flex align-items-stretch">
+                                                <button asp-page-handler="Delete" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@Model.ReportedPictures[i + 1].Id"><img class="card-img-bottom" src="/@Model.ReportedPictures[i + 1].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+                }
+                @if (Model.ReportedPictures.ElementAtOrDefault(i + 2) != null)
+                {
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <div class="container">
+                                    <form method="post">
+                                        <input type="hidden" asp-for="PictureId" class="form-control" value="@Model.ReportedPictures[i + 2].Id" />
+                                        <div class="row">
+                                            <div style="text-align: right" class="col-lg-8 d-flex align-items-stretch">
+                                                <button asp-page-handler="Approve" class="btn btn-success">Approve</button>
+                                            </div>
+                                            <div style="text-align: left" class="col-lg-4 d-flex align-items-stretch">
+                                                <button asp-page-handler="Delete" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@Model.ReportedPictures[i + 2].Id"><img class="card-img-bottom" src="/@Model.ReportedPictures[i + 2].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

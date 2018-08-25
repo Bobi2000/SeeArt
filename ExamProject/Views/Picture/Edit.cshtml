@@ -1,0 +1,54 @@
+﻿@model Art.Models.Picture
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<h4>Picture</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Picture" asp-action="Confirm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input value="@ViewBag.ViewModel.Id" type="hidden" asp-for="Id" />
+            <input value="@ViewBag.ViewModel.UserId" type="hidden" asp-for="UserId">
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input value="@ViewBag.ViewModel.Title" asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tags" class="control-label"></label>
+                <input value="@ViewBag.ViewModel.Tags" asp-for="Tags" class="form-control" />
+                <span asp-validation-for="Tags" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input style="background-color: #1e8cfd;" type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<h2>Delete</h2>
+<h4>Picture</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Picture" asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input value="@ViewBag.ViewModel.Id" type="hidden" asp-for="Id" />
+            <input value="@ViewBag.ViewModel.UserId" type="hidden" asp-for="UserId">
+
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @*<a href="/viewimage/image/@Model.Id">Back to Image</a>*@
+</div>
+

@@ -1,0 +1,107 @@
+﻿@model Art.App.Controllers.SearchController
+@using System.Linq;
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+
+@*<table class="table table-borderless">
+        <tbody>
+            @for (int i = 0; i < ViewBag.Results.Count; i += 3)
+            {
+                <tr>
+                    <td><a href="/viewimage/image/@ViewBag.Results[i].Id"><img src="/@ViewBag.Results[i].Url" style="max-height: 270px; height: auto" /></a></td>
+
+                    @try
+                    {
+                        <td><a href="/viewimage/image/@ViewBag.Results[i + 1].Id"><img src="/@ViewBag.Results[i + 1].Url" style="max-height: 270px; height: auto;" /></a></td>
+                    }
+                    catch { }
+                    @try
+                    {
+                        <td><a href="/viewimage/image/@ViewBag.Results[i + 2].Id"><img src="/@ViewBag.Results[i + 2].Url" style="max-height: 270px; height: auto;" /></a></td>
+                    }
+                    catch { }
+
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
+<table class="table table-borderless">
+    <tbody>
+        @for (int i = 0; i < ViewBag.Results.Count; i += 3)
+        {
+        <tr>
+            <td>
+                <div class="text-center">
+                    <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@ViewBag.Results[i].Title</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                        <a style="text-decoration: none; color: black" href="/profile/@ViewBag.Results[i].UserName"><p style="text-align: left" class="card-text">@ViewBag.Results[i].UserName</p></a>
+                                    </div>
+                                    <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                        <a style="text-decoration: none; color: black" href="/viewimage/image/@ViewBag.Results[i].Id"><p style="text-align: left" class="card-text">@ViewBag.Results[i].Likes Likes</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/viewimage/image/@ViewBag.Results[i].Id"><img class="card-img-bottom" src="/@ViewBag.Results[i].Url" style="max-height: 200px; height: auto" /></a>
+                    </div>
+                </div>
+            </td>
+            @if (ViewBag.Results.Count > i + 1)
+            {
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">@ViewBag.Results[i + 1].Title</h5>
+                                <div class="container">
+                                    <div class="row">
+                                        <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/profile/@ViewBag.Results[i + 1].UserName"><p style="text-align: left" class="card-text">@ViewBag.Results[i + 1].UserName</p></a>
+                                        </div>
+                                        <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/viewimage/image/@ViewBag.Results[i + 1].Id"><p style="text-align: left" class="card-text">@ViewBag.Results[i + 1].Likes Likes</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@ViewBag.Results[i + 1].Id"><img class="card-img-bottom" src="/@ViewBag.Results[i + 1].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+            }
+
+            @if (ViewBag.Results.Count > i + 2)
+            {
+                <td>
+                    <div class="text-center">
+                        <div class="card" style="background-color: #fafafa; max-width: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">@ViewBag.Results[i + 2].Title</h5>
+                                <div class="container">
+                                    <div class="row">
+                                        <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/profile/@ViewBag.Results[i + 2].UserName"><p style="text-align: left" class="card-text">@ViewBag.Results[i + 2].UserName</p></a>
+                                        </div>
+                                        <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                            <a style="text-decoration: none; color: black" href="/viewimage/image/@ViewBag.Results[i + 2].Id"><p style="text-align: left" class="card-text">@ViewBag.Results[i + 2].Likes Likes</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/viewimage/image/@ViewBag.Results[i].Id"><img class="card-img-bottom" src="/@ViewBag.Results[i].Url" style="max-height: 200px; height: auto" /></a>
+                        </div>
+                    </div>
+                </td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>

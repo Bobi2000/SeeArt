@@ -1,0 +1,25 @@
+﻿@page
+@model Art.App.Pages.UploadPictureModel
+@{
+    ViewData["Title"] = "UploadPicture";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
+            <div class="form-group">
+                <p>Upload one or more files using this form:</p>
+                <input type="file" name="files" multiple />
+            </div>
+            <div class="form-group">
+                <input style="background-color: #1e8cfd;" class="btn" type="submit" value="Upload" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,0 +1,39 @@
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto">
+            @if (this.User.IsInRole("Admin"))
+            {
+                <li class="nav-item">
+                    <a href="/admin/list" style="color:white" class="nav-link">Admin List</a>
+                </li>
+            }
+
+            <li class="nav-item">
+                @*<a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" style="color:white" class="nav-link">Hello @UserManager.GetUserName(User)!</a>*@
+                <a href="/profile/@UserManager.GetUserName(User)" title="Manage" style="color:white" class="nav-link">Hello, @UserManager.GetUserName(User)!</a>
+            </li>
+            <li class="nav-item">
+                <a href="/Image/UploadImage" title="Image" style="color:white" class="nav-link">Upload Picture</a>
+            </li>
+            <li class="nav-item">
+                <a href="/Comic/UploadComic" title="Image" style="color:white" class="nav-link">Create Comic</a>
+            </li>
+            <li class="nav-item">
+                <button type="submit" style="color:white" class="btn btn-link navbar-btn navbar-link">Logout</button>
+            </li>
+        </ul>
+    </form>
+}
+else
+{
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a asp-area="Identity" asp-page="/Account/Register" style="color:white" class="nav-link">Register</a></li>
+        <li class="nav-item"><a asp-area="Identity" asp-page="/Account/Login" style="color:white" class="nav-link">Login</a></li>
+    </ul>
+}

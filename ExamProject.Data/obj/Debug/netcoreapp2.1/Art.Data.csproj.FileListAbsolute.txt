@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Data.deps.json
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Data.dll
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.AssemblyInfo.cs
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Data.pdb
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.csprojAssemblyReference.cache
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.dll
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.pdb
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Models.dll
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Models.pdb
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\obj\Debug\netcoreapp2.1\Art.Data.csproj.CopyComplete
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Data.runtimeconfig.json
+C:\Users\User\source\repos\ExamProject\ExamProject.Data\bin\Debug\netcoreapp2.1\Art.Data.runtimeconfig.dev.json

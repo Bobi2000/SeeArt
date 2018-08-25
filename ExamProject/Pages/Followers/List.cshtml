@@ -1,0 +1,54 @@
+﻿@page "{username}"
+@model Art.App.Pages.Followers.ListModel
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/>
+<br/>
+<table class="table table-borderless table-striped">
+    <tbody>
+        @for (int i = 0; i < Model.Followers.Count; i += 5)
+        {
+        <tr>
+            <td>
+                <div class="text-center">
+                    <a class="btn" href="/profile/@Model.Followers[i].UserName">@Model.Followers[i].UserName</a>
+                </div>
+            </td>
+            @if (Model.Followers.ElementAtOrDefault(i + 1) != null)
+            {
+                <td>
+                    <div class="text-center">
+                        <a class="btn" href="/profile/@Model.Followers[i + 1].UserName">@Model.Followers[i + 1].UserName</a>
+                    </div>
+                </td>
+            }
+            @if (Model.Followers.ElementAtOrDefault(i + 2) != null)
+            {
+                <td>
+                    <div class="text-center">
+                        <a class="btn" href="/profile/@Model.Followers[i + 2].UserName">@Model.Followers[i + 2].UserName</a>
+                    </div>
+                </td>
+            }
+            @if (Model.Followers.ElementAtOrDefault(i + 3) != null)
+            {
+                <td>
+                    <div class="text-center">
+                        <a class="btn" href="/profile/@Model.Followers[i + 3].UserName">@Model.Followers[i + 3].UserName</a>
+                    </div>
+                </td>
+            }
+            @if (Model.Followers.ElementAtOrDefault(i + 4) != null)
+            {
+                <td>
+                    <div class="text-center">
+                        <a class="btn" href="/profile/@Model.Followers[i + 4].UserName">@Model.Followers[i + 4].UserName</a>
+                    </div>
+                </td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>

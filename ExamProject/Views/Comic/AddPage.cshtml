@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "AddPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddPage</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Comic" asp-action="AddPage" method="post" enctype="multipart/form-data">
+            <hr />
+
+            <input type="hidden" class="form-control" value="@ViewData["id"]" name="chapterId" />
+
+            <div class="form-group">
+                <input class="form-control" type="file" name="file" />
+            </div>
+
+            <div class="form-group">
+                <button asp-page-handler="Add" style="background-color: #1e8cfd;" class="btn btn-default" type="submit">Add Another Page</button>
+                @*<button asp-page-handler="Submit" class="btn btn-danger" type="submit"><div style="color: black">Upload</div></button>*@
+            </div>
+            <div class="form-group">
+
+            </div>
+        </form>
+    </div>
+</div>

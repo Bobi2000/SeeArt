@@ -1,0 +1,98 @@
+﻿@page "{id:int}"
+@model Art.App.Pages.ViewImage.ImageModel
+@{
+    ViewData["Title"] = "Image";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<img src="/@Model.PictureModel.Url" style="max-height: 600px" />*@
+@*<img src="/_Pictures/shefasf/1b3fb022-5fe4-408b-b8b5-46f2045b3af2.jpg" style="max-height: 900px" />*@
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-sm-10">
+            <img class="img-fluid" src="/@Model.PictureModel.Url" />
+            <table style="width: 100%">
+                <tr style="border-bottom: 1px solid gray">
+                    <td>
+                        <h2>@Model.PictureModel.Title</h2>
+                    </td>
+                    <td align="right">
+                        <form method="post">
+                            <input type="hidden" asp-for="PictureId" class="form-control" value="@Model.PictureModel.Id" />
+                            <button onclick="OnReport()" asp-page-handler="Report" class="btn btn-danger">Report</button>
+                        </form>
+                        @if (Model.PictureModel.UserName == Model.User.Identity.Name)
+                        {
+                            <a href="/picture/edit/@Model.PictureModel.Id" @*style="color:white" *@ class="nav-item btn">Edit</a>
+                        }
+                    </td>
+                    <td align="right">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (Model.HasAlreadyLiked(@Model.PictureModel.Id))
+                            {
+                                <form method="post">
+                                    <input type="hidden" asp-for="PictureId" class="form-control" value="@Model.PictureModel.Id" />
+                                    <button type="submit" class="btn btn-link" asp-page-handler="UnLike">
+                                        <div style="color: black; text-decoration: none !important;">
+                                            <img src="~/images/LikeIcon.png" style="max-height: 20px" />&nbsp;Unlike&nbsp; @Model.PictureModel.Likes
+                                        </div>
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form method="post">
+                                    <input type="hidden" asp-for="PictureId" class="form-control" value="@Model.PictureModel.Id" />
+                                    <button type="submit" class="btn btn-link" asp-page-handler="Like">
+                                        <div style="color: black; text-decoration: none !important;">
+                                            <img src="~/images/LikeIcon.png" style="max-height: 20px" />&nbsp;Like&nbsp; @Model.PictureModel.Likes
+                                        </div>
+                                    </button>
+                                </form>
+                            }
+
+                        }
+                        else
+                        {
+                            <form action="/Identity/Account/Login">
+                                <button type="submit" class="btn btn-link">
+                                    <div style="color: black; text-decoration: none !important;">
+                                        <img src="~/images/LikeIcon.png" style="max-height: 20px" />&nbsp;Like&nbsp; @Model.PictureModel.Likes
+                                    </div>
+                                </button>
+                            </form>
+                        }
+
+
+                    </td>
+                </tr>
+            </table>
+
+            <a href="/profile/@Model.PictureModel.UserName"><h5>by @Model.PictureModel.UserName</h5></a>
+
+
+        </div>
+        <div class="col-sm-2">
+            @foreach (var picture in Model.RecommendedPictures)
+            {
+                <div class="row">
+                    <a href="/viewImage/image/@picture.Id"><img class="img-fluid" src="/@picture.Url" /></a>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col pt-4">
+            @*<p>@Model.Description</p>*@
+        </div>
+    </div>
+</div>
+
+<script>
+    function OnReport() {
+        alert("You reported the image.");
+    }
+</script>

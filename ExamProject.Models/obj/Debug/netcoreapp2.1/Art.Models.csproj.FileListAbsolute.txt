@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\obj\Debug\netcoreapp2.1\Art.Models.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\obj\Debug\netcoreapp2.1\Art.Models.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\obj\Debug\netcoreapp2.1\Art.Models.AssemblyInfo.cs
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\bin\Debug\netcoreapp2.1\Art.Models.deps.json
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\bin\Debug\netcoreapp2.1\Art.Models.dll
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\bin\Debug\netcoreapp2.1\Art.Models.pdb
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\obj\Debug\netcoreapp2.1\Art.Models.dll
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\obj\Debug\netcoreapp2.1\Art.Models.pdb
+C:\Users\User\source\repos\ExamProject\ExamProject.Models\obj\Debug\netcoreapp2.1\Art.Models.csprojAssemblyReference.cache

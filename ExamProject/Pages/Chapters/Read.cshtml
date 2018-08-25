@@ -1,0 +1,15 @@
+﻿@page "{id:int}"
+@model Art.App.Pages.Chapters.ReadModel
+@{
+    ViewData["Title"] = "Read";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a name="top"></a>
+<div class="text-center">
+    @foreach (var pic in Model.Chapter.Pictures)
+    {
+        <img class="card-img-bottom" src="/@pic.Picture.Url" />
+    }
+    <a href="#top">[ Back to top ]</a>
+</div>

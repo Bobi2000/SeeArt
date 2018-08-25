@@ -1,0 +1,49 @@
+﻿@page "{id:int}"
+@model Art.App.Pages.Comics.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<partial name="_ComicPartial" />
+
+@if (Model.Comic.OwnerUsername == Model.User.Identity.Name)
+{
+    <a href="/comic/addchapter/@Model.Comic.Id"><p align="right">Add Chapter</p></a>
+}
+
+<table class="table">
+    <tbody>
+        <tr style="text-align: left;">
+            <td style="height: 190px; width: 250px"><img src="/@Model.Comic.Cover.Url" style="width: 190px; height: 250px" /></td>
+            <td align="right"></td>
+            <td>
+                <h2>@Model.Comic.Title</h2>
+                <p>Year of Release:	@Model.Year</p>
+                <p>Genres: @Model.Tags</p>
+                <p>Reading Direction:	<b>Right to Left</b></p>
+                <p>@Model.Comic.Description</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Chapter Name</th>
+            <th scope="col">Day Added</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var chapter in Model.Chapters)
+        {
+            <tr style="text-align: left;">
+                <td align="left"><a style="text-decoration: none; color: black" href="/chapters/read/@chapter.Id">@chapter.Title</a></td>
+                <td>
+                    <p>@chapter.UploadDate.ToShortDateString()</p>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

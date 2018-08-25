@@ -1,0 +1,87 @@
+﻿@page
+@model Art.App.Pages.Comics.ViewModel
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<partial name="_ComicPartial" />
+
+@*<div class="container">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Latest Updates
+    <div class="text-center">
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px;" />
+                <p>Monster</p>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px" />
+                <p>Monster</p>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px" />
+                <p>Monster</p>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px" />
+                <p>Monster</p>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px" />
+                <p>Monster</p>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px" />
+                <p>Monster</p>
+            </div>
+        </div>
+        &nbsp;&nbsp;
+        <div class="text-center d-inline-block">
+            <div>
+                <img src="/_Pictures/shefasf/Comic/d6c71333-43d6-4aec-893d-07372b4f6dcb.jpg" style="width: 130px; height: 150px" />
+                <p>Monster</p>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<table class="table">
+    <tbody>
+        @foreach (var comic in Model.Comics)
+        {
+            <tr style="text-align: left;">
+                <td style="height: 190px; width: 250px">
+                    <a href="/Comics/Details/@comic.Id"><img src="/@comic.Cover.Url" style="width: 190px; height: 250px" /></a>
+                </td>
+                <td>
+                    <a style="text-decoration: none; color: black" href="/Comics/Details/@comic.Id"><h2>@comic.Title</h2></a>
+                    <p>Genres: @string.Join(", ", comic.Tags.Select(a => a.Tag.TagName))</p>
+                    <p>@comic.Description</p>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
