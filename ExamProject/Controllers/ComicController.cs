@@ -146,7 +146,7 @@ namespace Art.App.Controllers
             this.Context.Comics.Add(comic);
             await this.Context.SaveChangesAsync();
 
-            return Redirect($"/comics/details/{picture.Id}");
+            return Redirect($"/comics/details/{comic.Id}");
         }
 
         [HttpPost]

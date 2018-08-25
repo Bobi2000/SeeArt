@@ -24,9 +24,6 @@ namespace Art.App.Pages.Chapters
                 .ThenInclude(a => a.Picture)
                 .Where(a => a.Id == id)
                 .FirstOrDefault();
-            
-
-            var aa = 5;
         }
     }
 }
