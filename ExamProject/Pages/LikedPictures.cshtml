@@ -38,10 +38,18 @@
                             <div class="card" style="background-color: #fafafa; max-width: 400px">
                                 <div class="card-body">
                                     <h5 class="card-title">@Model.LikedPictures[i + 1].Title</h5>
-                                    <a style="text-decoration: none; color: black" href="/profile/@Model.LikedPictures[i + 1].UserName"><p style="text-align: left" class="card-text">@Model.LikedPictures[i + 1].UserName</p></a>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/profile/@Model.LikedPictures[i + 1].UserName"><p style="text-align: left" class="card-text">@Model.LikedPictures[i + 1].UserName</p></a>
+                                            </div>
+                                            <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.LikedPictures[i + 1].Id"><p style="text-align: left" class="card-text">@Model.LikedPictures[i + 1].Likes Likes</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="/viewimage/image/@Model.LikedPictures[i + 1].Id"><img class="card-img-bottom" src="/@Model.LikedPictures[i + 1].Url" style="max-height: 200px; height: auto" /></a>
-
+                                <a href="/viewimage/image/@Model.LikedPictures[i + 1].Id"><img class="card-img-bottom" src="/@Model.LikedPictures[i + 1].Url" style="max-height: 200px; height: auto;" /></a>
                             </div>
                         </div>
                     </td>
@@ -53,10 +61,18 @@
                             <div class="card" style="background-color: #fafafa; max-width: 400px">
                                 <div class="card-body">
                                     <h5 class="card-title">@Model.LikedPictures[i + 2].Title</h5>
-                                    <a style="text-decoration: none; color: black" href="/profile/@Model.LikedPictures[i + 2].UserName"><p style="text-align: left" class="card-text">@Model.LikedPictures.[i + 2].UserName</p></a>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div style="text-align: left" class="col-lg-8 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/profile/@Model.LikedPictures[i + 2].UserName"><p style="text-align: left" class="card-text">@Model.LikedPictures[i + 2].UserName</p></a>
+                                            </div>
+                                            <div style="text-align: right" class="col-lg-4 d-flex align-items-stretch">
+                                                <a style="text-decoration: none; color: black" href="/viewimage/image/@Model.LikedPictures[i + 2].Id"><p style="text-align: left" class="card-text">@Model.LikedPictures[i + 2].Likes Likes</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="/viewimage/image/@Model.LikedPictures[i + 2].Id"><img class="card-img-bottom" src="/@Model.LikedPictures[i + 2].Url" style="max-height: 200px; height: auto" /></a>
-
+                                <a href="/viewimage/image/@Model.LikedPictures[i + 2].Id"><img class="card-img-bottom" src="/@Model.LikedPictures[i + 2].Url" style="max-height: 200px; height: auto;" /></a>
                             </div>
                         </div>
                     </td>
